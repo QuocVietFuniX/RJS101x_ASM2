@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import Menu from "./MenuComponent";
 import StaffDetail from "./StaffdetailComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
-import Contact from "./ContactComponent";
 import StaffList from "./StaffListComponent";
 import Department from "./DepartmentComponent";
 import Salary from "./SalaryComponent";
@@ -36,14 +34,7 @@ class Main extends Component {
         <div>
         <Header />
         <Switch>
-            <Route
-            exact
-            path="/menu"
-            component={() => <Menu dishes={this.state.dishes} />}
-            />
-
             <Route path="/staff/:staffId" component={StaffWithId} />
-            <Route exact path="/contactus" component={Contact} />
             <Route
             path="/staff"
             component={() => <StaffList staffs={this.state.staffs} />}
